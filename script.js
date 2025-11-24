@@ -1,21 +1,28 @@
-// Toggle mobile navigation
+// 🍔 Toggle mobile navigation
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("nav-menu");
 
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-});
+if (hamburger && navMenu) {
+    hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    });
+}
 
-// Close menu when a link is clicked
+
+// ❌ Close menu when a link is clicked
 document.querySelectorAll(".nav-link").forEach(link =>
-  link.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-  })
+    link.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+    })
 );
+
+// --- New Code for the 'Start Your Journey' button ---
+
 /**
  * Smoothly scrolls the viewport to the element specified by the selector.
+ * This function is called by the 'onclick' attribute on your HTML buttons.
  * @param {string} selector - The CSS selector of the element to scroll to (e.g., '#contact').
  */
 function scrollToSection(selector) {
