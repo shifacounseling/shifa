@@ -14,3 +14,16 @@ document.querySelectorAll(".nav-link").forEach(link =>
     navMenu.classList.remove("active");
   })
 );
+/**
+ * Smoothly scrolls the viewport to the element specified by the selector.
+ * @param {string} selector - The CSS selector of the element to scroll to (e.g., '#contact').
+ */
+function scrollToSection(selector) {
+    const targetElement = document.querySelector(selector);
+    if (targetElement) {
+        // Use the scrollIntoView method with smooth behavior for a better user experience
+        targetElement.scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+}
