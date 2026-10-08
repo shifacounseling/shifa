@@ -1,22 +1,29 @@
-// 🍔 Toggle mobile navigation
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("nav-menu");
+// 🍔 Mobile navigation setup
+function initNavigation() {
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("nav-menu");
 
-if (hamburger && navMenu) {
-    hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
-    });
+    if (hamburger && navMenu) {
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        // ❌ Close menu when a link is clicked
+        document.querySelectorAll(".nav-link").forEach(link =>
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+            })
+        );
+    }
 }
 
-
-// ❌ Close menu when a link is clicked
-document.querySelectorAll(".nav-link").forEach(link =>
-    link.addEventListener("click", () => {
-        hamburger.classList.remove("active");
-        navMenu.classList.remove("active");
-    })
-);
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initNavigation);
+} else {
+    initNavigation();
+}
 
 // --- New Code for the 'Start Your Journey' button ---
 
