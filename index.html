@@ -22,31 +22,101 @@
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
 
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Structured Data (JSON-LD) for Local Medical & Counseling Practice -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Shifa Counseling",
+      "description": "Professional, culturally sensitive, and evidence-based mental health care and therapy in San Marcos, California.",
+      "url": "https://shifacounseling.com/",
+      "telephone": "+1-760-481-4819",
+      "email": "clinicalpsy@proton.me",
+      "medicalSpecialty": "Psychiatric",
+      "currenciesAccepted": "USD",
+      "availableService": [
+        {
+          "@type": "MedicalTherapy",
+          "name": "Individual Therapy"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Couples Therapy"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Family Therapy"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Trauma & PTSD Therapy"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "310 S. Twin Oaks Valley Rd, Suite 107-222",
+        "addressLocality": "San Marcos",
+        "addressRegion": "CA",
+        "postalCode": "92078-4303",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 33.130151,
+        "longitude": -117.166633
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "San Marcos"
+        },
+        {
+          "@type": "State",
+          "name": "California"
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>Shifa Counseling</h2>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#contact" class="nav-link">Contact</a>
-                <a href="#contact" class="nav-link cta-button">Book Session</a>
-            </div>
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="crisis-banner">
+            <div class="container crisis-container">
+                <span class="crisis-icon">🆘</span>
+                <span class="crisis-text">
+                    <strong>Crisis Support:</strong> If you are experiencing a mental health emergency, call or text <a href="tel:988"><strong>988</strong></a> for free, 24/7 confidential help, or dial <a href="tel:911"><strong>911</strong></a>.
+                </span>
             </div>
         </div>
-    </nav>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>Shifa Counseling</h2>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="#contact" class="nav-link cta-button">Book Session</a>
+                </div>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" type="button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -61,10 +131,63 @@
             </div>
             <div class="hero-image">
                 <div class="hero-illustration">
-                    <div class="floating-element element-1"></div>
-                    <div class="floating-element element-2"></div>
-                    <div class="floating-element element-3"></div>
                     <div class="hero-circle"></div>
+                    <div class="wellness-art-wrapper">
+                        <svg class="wellness-art" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mindfulness and personal healing illustration">
+                            <defs>
+                                <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#10b981"/>
+                                    <stop offset="100%" stop-color="#059669"/>
+                                </linearGradient>
+                                <linearGradient id="sunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#fbbf24"/>
+                                    <stop offset="100%" stop-color="#f59e0b"/>
+                                </linearGradient>
+                                <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#2563eb"/>
+                                    <stop offset="100%" stop-color="#1d4ed8"/>
+                                </linearGradient>
+                                <linearGradient id="auraGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#93c5fd" stop-opacity="0.35"/>
+                                    <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.05"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- Ambient aura circles -->
+                            <circle cx="200" cy="200" r="165" fill="url(#auraGrad)" />
+                            <circle cx="200" cy="200" r="130" fill="#ffffff" opacity="0.65" stroke="#bfdbfe" stroke-width="2" stroke-dasharray="6 6" />
+                            
+                            <!-- Sun / New Beginning -->
+                            <circle cx="200" cy="140" r="38" fill="url(#sunGrad)" />
+
+                            <!-- Meditating / Mindful Figure Silhouette -->
+                            <circle cx="200" cy="188" r="20" fill="url(#bodyGrad)" />
+                            <path d="M168 252 C168 220, 232 220, 232 252 C232 264, 168 264, 168 252 Z" fill="url(#bodyGrad)" />
+                            
+                            <!-- Botanical Lotus of Growth -->
+                            <path d="M200 242 C218 228, 252 238, 252 258 C230 262, 210 252, 200 242 Z" fill="url(#leafGrad)" opacity="0.9" />
+                            <path d="M200 242 C182 228, 148 238, 148 258 C170 262, 190 252, 200 242 Z" fill="url(#leafGrad)" opacity="0.9" />
+                            <path d="M200 236 C208 218, 222 222, 224 245 C215 248, 205 242, 200 236 Z" fill="#34d399" />
+                            <path d="M200 236 C192 218, 178 222, 176 245 C185 248, 195 242, 200 236 Z" fill="#34d399" />
+                            
+                            <!-- Calming Ripple Lines -->
+                            <path d="M135 276 Q200 288 265 276" stroke="#60a5fa" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.7"/>
+                            <path d="M155 288 Q200 298 245 288" stroke="#93c5fd" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+                        </svg>
+                    </div>
+
+                    <!-- Floating Wellness Badges -->
+                    <div class="floating-badge badge-1">
+                        <span class="badge-icon">🌱</span>
+                        <span class="badge-text">Personal Growth</span>
+                    </div>
+                    <div class="floating-badge badge-2">
+                        <span class="badge-icon">🕊️</span>
+                        <span class="badge-text">Inner Peace</span>
+                    </div>
+                    <div class="floating-badge badge-3">
+                        <span class="badge-icon">🧠</span>
+                        <span class="badge-text">Evidence-Based</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -225,7 +348,7 @@
                             <span class="contact-icon">📞</span>
                             <div>
                                 <strong>Phone</strong>
-                                <p>1-760-481-4819</p>
+                                <p><a href="tel:17604814819" class="contact-link">1-760-481-4819</a></p>
                             </div>
                         </div>
                         
@@ -233,7 +356,7 @@
                             <span class="contact-icon">✉️</span>
                             <div>
                                 <strong>Email</strong>
-                                <p>clinicalpsy@proton.me</p>
+                                <p><a href="mailto:clinicalpsy@proton.me" class="contact-link">clinicalpsy@proton.me</a></p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -241,10 +364,17 @@
                             <div>
                                 <strong>Address</strong>
                                 <p>310 S. Twin Oaks Valley Rd, Suite 107-222 <br> San Marcos, CA 92078-4303</p>
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3341.198449331432!2d-117.1666327479567!3d33.13015064856573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc7619b52b0749%3A0xdfac32103b13bf95!2s310%20S%20Twin%20Oaks%20Valley%20Rd%2C%20San%20Marcos%2C%20CA%2092078%2C%20USA!5e0!3m2!1sen!2sca!4v1763853759245!5m2!1sen!2sca"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3341.198449331432!2d-117.1666327479567!3d33.13015064856573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc7619b52b0749%3A0xdfac32103b13bf95!2s310%20S%20Twin%20Oaks%20Valley%20Rd%2C%20San%20Marcos%2C%20CA%2092078%2C%20USA!5e0!3m2!1sen!2sca!4v1763853759245!5m2!1sen!2sca"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Shifa Counseling Office Location"></iframe>
                             </div>
                         </div>
-                        
+                    </div>
+
+                    <div class="crisis-card">
+                        <div class="crisis-card-header">
+                            <span class="crisis-card-icon">🆘</span>
+                            <h4>Emergency &amp; Crisis Support</h4>
+                        </div>
+                        <p>If you or someone you know is in immediate danger or experiencing a life-threatening mental health crisis, call or text <a href="tel:988"><strong>988</strong></a> (Suicide &amp; Crisis Lifeline) or dial <a href="tel:911"><strong>911</strong></a>. Free and confidential support is available 24/7.</p>
                     </div>
                 </div>
                 
@@ -286,8 +416,8 @@
                 </div>
                 <div class="footer-section">
                     <h4>Contact</h4>
-                    <p>📞 1-760-481-4819</p>
-                    <p>✉️ clinicalpsy@proton.me</p>
+                    <p>📞 <a href="tel:17604814819" class="footer-link">1-760-481-4819</a></p>
+                    <p>✉️ <a href="mailto:clinicalpsy@proton.me" class="footer-link">clinicalpsy@proton.me</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
